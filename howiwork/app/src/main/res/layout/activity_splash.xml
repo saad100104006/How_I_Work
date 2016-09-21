@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/top"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_background"
+    android:gravity="center">
+
+
+    <RelativeLayout
+        android:id="@+id/relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/splash_categories"
+
+        >
+
+    </RelativeLayout>
+
+    <RelativeLayout
+
+        android:id="@+id/top2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/top"
+        android:background="#80000000"
+        android:gravity="center"
+        android:orientation="horizontal"
+
+
+        >
+
+
+        <fr.castorflex.android.smoothprogressbar.SmoothProgressBar xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            app:spb_colors="@array/rainbow"
+            app:spb_mirror_mode="false"
+            app:spb_progressiveStart_activated="true"
+            app:spb_progressiveStart_speed="1.5"
+            app:spb_progressiveStop_speed="3.4"
+            app:spb_reversed="false"
+            app:spb_sections_count="4"
+            app:spb_speed="2.0"
+            app:spb_stroke_separator_length="4dp"
+            app:spb_stroke_width="4dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+
+
+            >
+
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:layout_alignBaseline="@+id/top"
+                android:layout_marginTop="35dp"
+                android:src="@drawable/hiw_icon"
+
+
+                />
+
+            <ImageView
+                android:layout_width="250dp"
+                android:layout_height="100dp"
+                android:layout_alignBaseline="@+id/top"
+                android:layout_centerInParent="@+id/top2"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/howiwork_logo"
+
+
+                />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            android:weightSum="1"
+
+
+            >
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight=".3"
+                android:gravity="left"
+
+                >
+
+                <ImageView
+                    android:id="@+id/settings2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="left"
+                    android:padding="5dp"
+                    android:src="@drawable/aits_logo"></ImageView>
+
+            </RelativeLayout>
+
+
+            />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_weight=".7"
+                android:gravity="bottom|right"
+
+                >
+
+                <ImageView
+                    android:id="@+id/settings"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_toRightOf="@+id/settings2"
+                    android:gravity="right"
+                    android:src="@drawable/ic_version" />
+
+                <TextView
+                    android:id="@+id/app_version"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/settings"
+                    android:layout_alignLeft="@+id/settings"
+                    android:layout_alignRight="@+id/settings"
+                    android:layout_alignTop="@+id/settings"
+                    android:gravity="center"
+                    android:text="saaaad"
+                    android:textColor="#ffffff"
+                    android:textSize="9dp"
+
+                    />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
