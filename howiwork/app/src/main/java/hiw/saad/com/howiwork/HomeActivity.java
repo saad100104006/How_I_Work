@@ -17,8 +17,7 @@ import com.daimajia.slider.library.SliderTypes.TextSliderView;
  * Created by saad on 9/12/16.
  */
 public class HomeActivity extends Activity {
-    private FlipViewController flipView;
-    private TextView textView;
+
     private int[] imageResources;
     private String[] imageResourcename;
     SliderLayout imageSliderLayout;
@@ -28,26 +27,29 @@ public class HomeActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        setImagesAndString();
+        setImageSlider();
+
+
+    }
+
+    private void setImagesAndString() {
         TypedArray typedArray = getResources().obtainTypedArray(R.array.imagestring);
-      //  TypedArray typedArray2 = getResources().obtainTypedArray(R.array.imagesname);
         if (typedArray != null && typedArray.length() > 0) {
             imageResources = new int[typedArray.length()];
             for (int i = 0; i < typedArray.length(); i++) {
                 imageResources[i] = typedArray.getResourceId(i, 0);
-              //  imageResourcename[i] = typedArray.getStringArray(i, 0);
+                //  imageResourcename[i] = typedArray.getStringArray(i, 0);
                 imageResourcename = getResources().getStringArray(R.array.imagesname);
 
             }
             typedArray.recycle();
         }
 
-        setImageSlider();
-
-
     }
 
     private void setImageSlider() {
-         imageSliderLayout =
+        imageSliderLayout =
                 (SliderLayout) findViewById(R.id.image_slider);
         for (int i = 0; i < imageResources.length; i++) {
             TextSliderView textSliderView = new TextSliderView(this);
@@ -59,7 +61,7 @@ public class HomeActivity extends Activity {
                 public void onSliderClick(BaseSliderView baseSliderView) {
 
 
-                    Toast.makeText(HomeActivity.this, "this is my Toast message!!! =)"+  imageSliderLayout.getCurrentPosition(),
+                    Toast.makeText(HomeActivity.this, "MY POSTION IS: "+  imageSliderLayout.getCurrentPosition(),
                             Toast.LENGTH_LONG).show();
 
 
