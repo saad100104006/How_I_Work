@@ -13,6 +13,10 @@
         <item name="android:windowFullscreen">true</item>
         <item name="android:windowContentOverlay">@null</item>
     </style>
+<<<<<<< HEAD
+
+=======
+>>>>>>> develop
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -21,5 +25,15 @@
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="tabTheme" parent="@android:style/Theme.Holo.NoActionBar.Fullscreen">
+        <item name="android:tabWidgetStyle">@style/Widget.TabWidget</item>
+
+
+    </style>
+
+    <style name="Widget.TabWidget" parent="android:Theme">
+        <item name="android:tabStripEnabled">true</item>
+    </style>
 
 </resources>
