@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">howiwork</string>
     <string name="action_settings">Settings</string>
+    <string name="activity_title">How I Work</string>
 
 
      <string name="softwareperson">আমি রাসেল আহমেদ, ওয়েব ডেভেলপার

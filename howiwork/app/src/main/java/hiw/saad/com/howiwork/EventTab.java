@@ -19,7 +19,7 @@ public class EventTab extends TabActivity {
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.first);
+        setContentView(R.layout.activity_tab);
 
 
 //set all the tabs
@@ -45,7 +45,7 @@ public class EventTab extends TabActivity {
                 .setContent(intentHome);
 
 //set developer tab
-        Intent intentDeveloper = new Intent().setClass(this, HomeActivity.class);
+        Intent intentDeveloper = new Intent().setClass(this, FlipComplexLayoutActivity.class);
         TabHost.TabSpec tabSpecDeveloper = tabHost
                 .newTabSpec("developer")
                 .setIndicator("developer")
@@ -103,9 +103,9 @@ public class EventTab extends TabActivity {
 
     }
 
-    public TabHost getMyTabHost() {
-        return tabHost;
-    }
+  //  public TabHost getMyTabHost() {
+       // return tabHost;
+   // }
 
 	/*@Override
     public void onTabChanged(String a) {
