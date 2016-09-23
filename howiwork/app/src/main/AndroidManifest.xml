@@ -28,7 +28,7 @@
         </activity>
 
         <activity
-            android:name=".FlipComplexLayoutActivity"
+            android:name=".FlipActivity"
             android:label="@string/app_name"
             android:theme="@style/AppFullScreenTheme">
         </activity>

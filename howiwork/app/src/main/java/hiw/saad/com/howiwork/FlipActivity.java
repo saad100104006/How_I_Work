@@ -24,7 +24,9 @@ import android.widget.TextView;
 
 import com.aphidmobile.flip.FlipViewController;
 
-public class FlipComplexLayoutActivity extends Activity  {
+import hiw.saad.com.howiwork.Adapters.FlipAdapter;
+
+public class FlipActivity extends Activity  {
 
   private FlipViewController flipView;
   private TextView textView;

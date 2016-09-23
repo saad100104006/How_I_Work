@@ -1,4 +1,4 @@
-package hiw.saad.com.howiwork;
+package hiw.saad.com.howiwork.Adapters;
 
 import android.content.Context;
 import android.text.Html;
@@ -15,6 +15,9 @@ import com.aphidmobile.utils.UI;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import hiw.saad.com.howiwork.Models.Flip;
+import hiw.saad.com.howiwork.R;
 
 public class FlipAdapter extends BaseAdapter {
 
@@ -68,15 +71,17 @@ public class FlipAdapter extends BaseAdapter {
 
     UI
         .<TextView>findViewById(layout, R.id.title)
-        .setText(AphidLog.format("%d. %s", position, data.title));
+        .setText(AphidLog.format(data.title));
+
+      //"%d. %s", position, 
 
     UI
         .<ImageView>findViewById(layout, R.id.photo)
-        .setImageBitmap(IO.readBitmap(inflater.getContext().getAssets(), data.imageFilename));
+            .setImageBitmap(IO.readBitmap(inflater.getContext().getAssets(), data.imageFilename));
 
     UI
         .<TextView>findViewById(layout, R.id.description)
-        .setText(Html.fromHtml(data.description));
+            .setText(Html.fromHtml(data.description));
 
 
 

@@ -45,7 +45,7 @@ public class EventTab extends TabActivity {
                 .setContent(intentHome);
 
 //set developer tab
-        Intent intentDeveloper = new Intent().setClass(this, FlipComplexLayoutActivity.class);
+        Intent intentDeveloper = new Intent().setClass(this, FlipActivity.class);
         TabHost.TabSpec tabSpecDeveloper = tabHost
                 .newTabSpec("developer")
                 .setIndicator("developer")
@@ -56,7 +56,7 @@ public class EventTab extends TabActivity {
 
 
         //	set designer tab
-        Intent intentDesigner = new Intent().setClass(this, HomeActivity.class);
+        Intent intentDesigner = new Intent().setClass(this, FlipActivity.class);
         TabHost.TabSpec tabSpecDesigner = tabHost
                 .newTabSpec("designer")
                 .setIndicator("designer")
@@ -69,7 +69,7 @@ public class EventTab extends TabActivity {
         //set enterprenur tab
 
         Intent intentEnterprenur = new Intent().setClass(this,
-                HomeActivity.class);
+                FlipActivity.class);
         TabHost.TabSpec tabSpecEnterprenur = tabHost
                 .newTabSpec("enterprenur")
                 .setIndicator("enterprenur")
@@ -80,7 +80,7 @@ public class EventTab extends TabActivity {
 
 //		set bussiness tab
 
-        Intent intentBussiness = new Intent().setClass(this, HomeActivity.class);
+        Intent intentBussiness = new Intent().setClass(this, FlipActivity.class);
         TabHost.TabSpec tabSpecBussiness = tabHost
                 .newTabSpec("bussiness")
                 .setIndicator("bussiness")
@@ -99,28 +99,10 @@ public class EventTab extends TabActivity {
         // set Windows tab as default (zero based)
         tabHost.setCurrentTab(0);
 
-        //tabHost.setOnTabChangedListener(this);
-
     }
 
-  //  public TabHost getMyTabHost() {
-       // return tabHost;
-   // }
-
-	/*@Override
-    public void onTabChanged(String a) {
-		// TODO Auto-generated method stub
-
-		if (a == "Album") {
-			Log.e("ha", "Hahaha");
-
-			//menu.findItem(R.id.take_photo).setVisible(true);
-
-		//menu.findItem(R.id.Log_Out).setVisible(false);
-
-		}
 
 
-	}*/
+
 
 }
