@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bussinessperson" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:gravity="bottom|center"
+        android:layout_alignBottom="@+id/image"
+        android:padding="10dp"
+        android:text="আমি মুস্তাফিযুর রাহমান, Startup Dhaka এর প্রতিষ্ঠাতা ও সিইও আমি যেভাবে কাজ করি"/>
+
+</RelativeLayout>

@@ -1,2 +1,3 @@
-include ':app', ':aphidFlipViewLibrarys'
+include ':app', ':aphidFlipViewLibrarys', ':FloatingGroupExpandableListViews'
 project(':aphidFlipViewLibrarys').projectDir = new File('aphidFlipViewLibrary')
+project(':FloatingGroupExpandableListViews').projectDir = new File('FloatingGroupExpandableListView')
