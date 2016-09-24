@@ -2,7 +2,9 @@ package hiw.saad.com.howiwork;
 
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -30,6 +32,32 @@ public class SplashscreenActivity extends Activity implements Animation.Animatio
    //the version number should be shown from the app version
         String versionName = BuildConfig.VERSION_NAME;
         appVersion.setText("v" + versionName);
+
+
+        Handler handler = new Handler();
+
+
+
+
+       /* handler.postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+               splashScreen.setBackgroundResource(R.drawable.bg_splash);
+            }
+
+        }, 2000);*/
+
+        handler.postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+                finish();
+                Intent intent = new Intent(SplashscreenActivity.this, EventTab.class);
+                SplashscreenActivity.this.startActivity(intent);
+            }
+
+        }, 5000);
 
 
     }

@@ -1,11 +1,13 @@
 package hiw.saad.com.howiwork.Adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -16,6 +18,7 @@ import com.aphidmobile.utils.UI;
 import java.util.ArrayList;
 import java.util.List;
 
+import hiw.saad.com.howiwork.DetailsActivity;
 import hiw.saad.com.howiwork.Models.Flip;
 import hiw.saad.com.howiwork.R;
 
@@ -93,18 +96,17 @@ public class FlipAdapter extends BaseAdapter {
             .<TextView>findViewById(layout, R.id.date)
             .setText(Html.fromHtml(data.date));
 
- /*   UI
-        .<Button>findViewById(layout, R.id.wikipedia)
+   UI
+        .<Button>findViewById(layout, R.id.more)
         .setOnClickListener(new View.OnClickListener() {
           @Override
           public void onClick(View v) {
             Intent intent = new Intent(
-                    Intent.ACTION_VIEW,
-                    Uri.parse(data.link)
-            );
+                    inflater.getContext(), DetailsActivity.class);
+
             inflater.getContext().startActivity(intent);
           }
-        });*/
+        });
 
     return layout;
   }
