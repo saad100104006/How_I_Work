@@ -1,11 +1,12 @@
 package hiw.saad.com.howiwork;
 
 import android.annotation.TargetApi;
-import android.app.Activity;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -18,7 +19,7 @@ import com.diegocarloslima.fgelv.lib.WrapperExpandableListAdapter;
 
 import hiw.saad.com.howiwork.Adapters.DetailsAdapter;
 
-public class DetailsActivity extends Activity {
+public class DetailsActivity extends AppCompatActivity {
 	
 	@TargetApi(Build.VERSION_CODES.HONEYCOMB)
 	@Override
@@ -27,7 +28,10 @@ public class DetailsActivity extends Activity {
 		
 		setContentView(R.layout.activity_details);
 
-		getActionBar().setDisplayHomeAsUpEnabled(true);
+
+		final Toolbar toolbar = (Toolbar) findViewById(R.id.tabanim_toolbar);
+		setSupportActionBar(toolbar);
+		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 		
 		final FloatingGroupExpandableListView list = (FloatingGroupExpandableListView) findViewById(R.id.sample_activity_list);
 

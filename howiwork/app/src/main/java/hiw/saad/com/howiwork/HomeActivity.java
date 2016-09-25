@@ -2,12 +2,11 @@ package hiw.saad.com.howiwork;
 
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.res.TypedArray;
 import android.os.Bundle;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.aphidmobile.flip.FlipViewController;
 import com.daimajia.slider.library.Animations.DescriptionAnimation;
 import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.BaseSliderView;
@@ -61,8 +60,11 @@ public class HomeActivity extends Activity {
                 public void onSliderClick(BaseSliderView baseSliderView) {
 
 
-                    Toast.makeText(HomeActivity.this, "MY POSTION IS: "+  imageSliderLayout.getCurrentPosition(),
+                    Toast.makeText(HomeActivity.this, " POSTION IS: "+  imageSliderLayout.getCurrentPosition(),
                             Toast.LENGTH_LONG).show();
+
+                    Intent intent=new Intent(HomeActivity.this,DetailsActivity.class);
+                    startActivity(intent);
 
 
                 }

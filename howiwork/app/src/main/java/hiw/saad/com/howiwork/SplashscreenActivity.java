@@ -57,7 +57,7 @@ public class SplashscreenActivity extends Activity implements Animation.Animatio
                 SplashscreenActivity.this.startActivity(intent);
             }
 
-        }, 5000);
+        }, 7000);
 
 
     }
